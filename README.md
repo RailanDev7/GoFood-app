@@ -19,8 +19,6 @@ Material Design 3
 
 Widgets padronizados
 
-📁 Estrutura do Projeto
-
 📲 Como Rodar o Projeto
 Clone o repositório
 
