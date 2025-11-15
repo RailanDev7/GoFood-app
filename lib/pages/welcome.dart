@@ -1,4 +1,5 @@
 import 'package:app/pages/login_page.dart';
+import 'package:app/pages/register.dart';
 import 'package:flutter/material.dart';
 
 class Welcome extends StatefulWidget {
@@ -66,9 +67,9 @@ class _WelcomeState extends State<Welcome> {
               children: [
                 Text('Não tem uma conta? ', style: TextStyle(fontSize: 16)),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () => _registro(context),
                   child: Text(
-                    'Registrar',
+                    'Criar conta',
                     style: TextStyle(
                       color: Colors.red,
                       fontWeight: FontWeight.bold,
@@ -86,5 +87,8 @@ class _WelcomeState extends State<Welcome> {
 
   void _irlogin(BuildContext context) {
     Navigator.push(context, MaterialPageRoute(builder: (_) => LoginPage()));
+  }
+   void _registro(BuildContext context) {
+    Navigator.push(context, MaterialPageRoute(builder: (_) => Register()));
   }
 }

@@ -1,8 +1,8 @@
-import 'package:app/pages/register.dart';
+import 'package:app/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class Register extends StatelessWidget {
+  const Register({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class LoginPage extends StatelessWidget {
 
             SizedBox(height: 40),
             Text(
-              "Faça login\n e ganhe descontos no app.",
+              "Registre-se\n e ganhe descontos no app.",
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 24,
@@ -28,11 +28,11 @@ class LoginPage extends StatelessWidget {
             //sign-up
             SizedBox(height: 20),
 
-            Text('Não tem uma conta? ', style: TextStyle(fontSize: 16)),
+            Text('Já tem uma conta? ', style: TextStyle(fontSize: 16)),
             GestureDetector(
-              onTap: () => _registro(context),
+              onTap: () => login(context),
               child: Text(
-                "Registre-se",
+                "Fazer login",
                 style: TextStyle(
                   color: Colors.red,
                   fontWeight: FontWeight.bold,
@@ -42,6 +42,13 @@ class LoginPage extends StatelessWidget {
             ),
             SizedBox(height: 26),
             //formualario email e login
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'Nome',
+                border: OutlineInputBorder(),
+              ),
+            ),
+            SizedBox(height: 16),
             TextField(
               decoration: InputDecoration(
                 labelText: 'Email',
@@ -71,7 +78,7 @@ class LoginPage extends StatelessWidget {
                 ),
                 onPressed: () => (context),
                 child: Text(
-                  'Logar',
+                  'Criar',
                   style: TextStyle(
                     fontSize: 26,
                     color: Colors.white,
@@ -85,7 +92,8 @@ class LoginPage extends StatelessWidget {
       ),
     );
   }
-   void _registro(BuildContext context) {
-    Navigator.push(context, MaterialPageRoute(builder: (_) => Register()));
+  void login(BuildContext context) {
+    Navigator.push(context, MaterialPageRoute(builder: (_) => LoginPage()));
   }
+   
 }
