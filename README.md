@@ -33,3 +33,13 @@ Welcome Page:
 
 <img width="410" height="857" alt="image" src="https://github.com/user-attachments/assets/9cd71787-fa0f-4d08-b9e5-5d76087061b7" />
 
+=============================================================================================================================
+Register page: 
+<img width="390" height="834" alt="image" src="https://github.com/user-attachments/assets/f00a7a08-b1ed-404e-8b19-df358e1b0d53" />
+
+=============================================================================================================================
+Login Page: 
+<img width="388" height="847" alt="image" src="https://github.com/user-attachments/assets/c92da1d5-e729-45f1-95fa-e2b4061e1cab" />
+
+
+
