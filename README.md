@@ -19,7 +19,7 @@ Material Design 3
 
 Widgets padronizados
 
-📲 Como Rodar o Projeto
+📲 Como Rodar o Projeto: 
 Clone o repositório
 
 Instale as dependências:
