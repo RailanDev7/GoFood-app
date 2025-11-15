@@ -33,4 +33,5 @@ Execute o app:
 --------------------------------------------------------------------------------------------------------------------------------
 Welcome Page:
 
-<img width="1440" height="3120" alt="Screenshot_1763220513" src="https://github.com/user-attachments/assets/82c02379-fa89-4555-a441-2825909f3f7e" />
+<img width="410" height="857" alt="image" src="https://github.com/user-attachments/assets/9cd71787-fa0f-4d08-b9e5-5d76087061b7" />
+
