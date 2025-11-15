@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:app/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
 class Welcome extends StatefulWidget {
@@ -40,32 +40,31 @@ class _WelcomeState extends State<Welcome> {
             SizedBox(
               width: 250,
               height: 72,
-              child: ElevatedButton(style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(vertical: 18),
-                backgroundColor: const Color.fromARGB(255, 188, 5, 5),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12)
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  padding: EdgeInsets.symmetric(vertical: 18),
+                  backgroundColor: const Color.fromARGB(255, 188, 5, 5),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
                 ),
-              ),
-                onPressed: (){},
-                 child: Text(
+                onPressed: () => _irlogin(context),
+                child: Text(
                   'Logar',
                   style: TextStyle(
                     fontSize: 26,
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
-
                   ),
-                  )
-                  ),
+                ),
+              ),
             ),
-            SizedBox( height: 30),
+            SizedBox(height: 30),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Não tem uma conta? ', 
-                style: TextStyle(fontSize: 16),),
+                Text('Não tem uma conta? ', style: TextStyle(fontSize: 16)),
                 GestureDetector(
                   onTap: () {},
                   child: Text(
@@ -73,15 +72,19 @@ class _WelcomeState extends State<Welcome> {
                     style: TextStyle(
                       color: Colors.red,
                       fontWeight: FontWeight.bold,
-                      fontSize: 16
+                      fontSize: 16,
                     ),
                   ),
-                )
+                ),
               ],
-            )
+            ),
           ],
         ),
       ),
     );
+  }
+
+  void _irlogin(BuildContext context) {
+    Navigator.push(context, MaterialPageRoute(builder: (_) => LoginPage()));
   }
 }
