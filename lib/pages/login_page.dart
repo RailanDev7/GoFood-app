@@ -1,15 +1,9 @@
-import 'package:app/pages/login_page.dart';
 import 'package:app/pages/register.dart';
 import 'package:flutter/material.dart';
 
-class Welcome extends StatefulWidget {
-  const Welcome({super.key});
+class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
 
-  @override
-  State<Welcome> createState() => _WelcomeState();
-}
-
-class _WelcomeState extends State<Welcome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,16 +13,11 @@ class _WelcomeState extends State<Welcome> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             //logo
-            Image.asset("assets/GoFood.png"),
+            Image.asset('assets/GoFood.png'),
 
             SizedBox(height: 40),
-            //image
-            Image.asset('assets/personagem.png'),
-
-            SizedBox(height: 40),
-            //texto central
             Text(
-              "Comida boa, entrega rápida.\n Tudo o que você ama, em um só app.",
+              "Faça login\n e ganhe descontos no app.",
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 24,
@@ -36,9 +25,40 @@ class _WelcomeState extends State<Welcome> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            //botão login
-            SizedBox(height: 40),
+            //sign-up
+            SizedBox(height: 20),
+
+            Text('Não tem uma conta? ', style: TextStyle(fontSize: 16)),
+            GestureDetector(
+              onTap: () => _registro(context),
+              child: Text(
+                "Registre-se",
+                style: TextStyle(
+                  color: Colors.red,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                ),
+              ),
+            ),
+            SizedBox(height: 26),
+            //formualario email e login
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'Email',
+                border: OutlineInputBorder(),
+              ),
+            ),
+            SizedBox(height: 16),
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'Senha',
+                border: OutlineInputBorder(),
+              ),
+              obscureText: true,
+            ),
+            SizedBox(height: 26),
             SizedBox(
+               //botão sign in
               width: 250,
               height: 72,
               child: ElevatedButton(
@@ -49,7 +69,7 @@ class _WelcomeState extends State<Welcome> {
                     borderRadius: BorderRadius.circular(12),
                   ),
                 ),
-                onPressed: () => _irlogin(context),
+                onPressed: () => (context),
                 child: Text(
                   'Logar',
                   style: TextStyle(
@@ -59,34 +79,11 @@ class _WelcomeState extends State<Welcome> {
                   ),
                 ),
               ),
-            ),
-            SizedBox(height: 30),
-
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('Não tem uma conta? ', style: TextStyle(fontSize: 16)),
-                GestureDetector(
-                  onTap: () => _registro(context),
-                  child: Text(
-                    'Criar conta',
-                    style: TextStyle(
-                      color: Colors.red,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
-                    ),
-                  ),
-                ),
-              ],
-            ),
+            ),    
           ],
         ),
       ),
     );
-  }
-
-  void _irlogin(BuildContext context) {
-    Navigator.push(context, MaterialPageRoute(builder: (_) => LoginPage()));
   }
    void _registro(BuildContext context) {
     Navigator.push(context, MaterialPageRoute(builder: (_) => Register()));
